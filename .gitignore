@@ -1,0 +1,8 @@
+# Internal working docs — not part of the deployable site
+LightColab_Website_Storyboard_v1.pdf
+lightcolab (1).html
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
