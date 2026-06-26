@@ -139,9 +139,11 @@
   /* Client wall ------------------------------------------------------------ */
   var clientsList = $('#clients-list');
   if (clientsList && typeof LC_CLIENTS !== 'undefined') {
-    clientsList.innerHTML = LC_CLIENTS.map(function (c) {
-      return '<div class="client-chip">' + esc(c) + '</div>';
+    var clientItems = LC_CLIENTS.map(function (c) {
+      return '<span class="marquee-item">' + esc(c) + '</span>';
     }).join('');
+    // Duplicate the list so the -50% scroll loops seamlessly.
+    clientsList.innerHTML = '<div class="marquee-track">' + clientItems + clientItems + '</div>';
   }
 
   /* Scroll reveals --------------------------------------------------------- */

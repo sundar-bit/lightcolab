@@ -7,21 +7,21 @@
   <title>Light Colab — Love for Light | Architectural Lighting Design Studio</title>
   <meta name="description" content="Light Colab is an architectural lighting design studio working across commercial, residential, hospitality, retail, facade, healthcare and institutional spaces — pairing design sensibility with a culture of controls and technology.">
   <meta name="theme-color" content="#0a0a0c">
-  <link rel="canonical" href="https://lightcolab.com/"><!-- [confirm final domain] -->
+  <link rel="canonical" href="https://lightcolab.net/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Light Colab">
   <meta property="og:title" content="Light Colab — Love for Light">
   <meta property="og:description" content="Architectural lighting design studio. We shape space, mood, and emotion through light.">
-  <meta property="og:url" content="https://lightcolab.com/"><!-- [confirm final domain] -->
-  <meta property="og:image" content="https://lightcolab.com/img/og-image.jpg"><!-- [add 1200x630 share image] -->
+  <meta property="og:url" content="https://lightcolab.net/">
+  <meta property="og:image" content="https://lightcolab.net/img/og-image.jpg"><!-- [add 1200x630 share image] -->
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Light Colab — Love for Light">
   <meta name="twitter:description" content="Architectural lighting design studio. We shape space, mood, and emotion through light.">
-  <meta name="twitter:image" content="https://lightcolab.com/img/og-image.jpg"><!-- [add 1200x630 share image] -->
+  <meta name="twitter:image" content="https://lightcolab.net/img/og-image.jpg"><!-- [add 1200x630 share image] -->
 
   <!-- Favicon hooks (drop real files into /img and these resolve) -->
   <link rel="icon" href="img/favicon.ico" sizes="any">
@@ -39,13 +39,16 @@
 
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Ambient wall-wash lighting — warm light grazing from the top & bottom edges -->
+  <div class="ambient" aria-hidden="true"></div>
+
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="nav" id="nav" aria-label="Primary">
     <a href="#top" class="logo">Light<span>.</span>Colab</a>
     <div class="nav-links" id="navLinks">
       <a href="#about">Studio</a>
-      <a href="#work">Work</a>
       <a href="#sectors">Sectors</a>
+      <a href="#work">Work</a>
       <a href="#process">Process</a>
       <a href="#team">Team</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
@@ -71,7 +74,7 @@
         </div>
       </div>
       <div class="hero-meta">
-        <span>Est. [year] &nbsp;/&nbsp; Two studios &nbsp;/&nbsp; [City One] · [City Two]</span>
+        <span>10+ years &nbsp;/&nbsp; 250+ projects &nbsp;/&nbsp; Chennai · Bangalore</span>
         <span class="scroll-cue">Scroll</span>
       </div>
     </header>
@@ -84,9 +87,9 @@
           <h2 id="about-h">A practice built on the belief that good light is <em>felt</em>, not just seen.</h2>
         </div>
         <div class="intro-body reveal">
-          <p>[Placeholder intro — pull the firm's own words from the portfolio PDF.] Light Colab is a lighting design practice working across architecture and interiors, translating each space's intent into considered, layered illumination.</p>
-          <p>Our approach blends design with a strong controls culture — careful attention to dimming, scenes, and the technology that lets a space shift through the day. The result is lighting that serves both atmosphere and function.</p>
-          <p>We collaborate closely with architects, interior designers, and clients from concept through commissioning.</p>
+          <p>Light Colab is an independent architectural lighting design firm, with studios in Chennai and Bangalore. For over a decade we have practised lighting design across national and international projects — more than 250 to date, spanning every kind of space and genre.</p>
+          <p>Our philosophy is to provide solutions that are eminent, balanced, and impressive, yet sustainable. We stay project-centric, holding a careful equipoise between stakeholders, budgets, timelines and commitments on every brief.</p>
+          <p>Staying current with market trends and product developments is vital to how we work — it lets us match each design solution to the latest industry technology, from concept through commissioning.</p>
         </div>
       </div>
     </section>
@@ -102,23 +105,227 @@
           <article class="cap reveal">
             <p class="cap-num">01</p>
             <h3>Lighting Design</h3>
-            <p>[Approved description — 1–2 sentences.] Concept-led architectural and interior lighting — layering ambient, accent, and task light to give every space its intended feeling.</p>
+            <p>Concept-led architectural and interior lighting across residential, commercial, hospitality, retail, healthcare, institutional, spiritual and facade projects — layering ambient, accent and task light to give every space its intended feeling.</p>
           </article>
           <article class="cap reveal">
             <p class="cap-num">02</p>
             <h3>Controls Culture</h3>
-            <p>[Approved description — 1–2 sentences.] Scenes, dimming, and daylight integration designed so a space can transform through the hours and across moods.</p>
+            <p>Lighting controls and home automation, delivered end to end. With a balance of technical knowledge and product exposure, we engineer scenes, dimming and daylight integration — a particular strength across residential, commercial, hospitality and facade work.</p>
           </article>
           <article class="cap reveal">
             <p class="cap-num">03</p>
             <h3>Technology</h3>
-            <p>[Approved description — 1–2 sentences.] Specification and integration of current lighting technology — efficient, precise, and built to last in real-world use.</p>
+            <p>We keep pace with market trends and product developments to specify current, efficient lighting technology and management systems — sustainable, state-of-the-art solutions that make the best use of every project's resources.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Sections 04–09 added in subsequent passes -->
+    <!-- ===================== 04 · SECTORS ===================== -->
+    <section class="section-pad" id="sectors" aria-labelledby="sectors-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Where we work</p>
+          <h2 id="sectors-h">Light across <em>every kind of space</em>.</h2>
+          <p>From workplaces and homes to facades, healthcare, and places of worship — a single craft, applied to many contexts.</p>
+        </div>
+
+        <!-- Sector filter — data-f must match the `sector` field in data/projects.js -->
+        <div class="filters reveal" role="group" aria-label="Filter projects by sector">
+          <button class="filter active" type="button" data-f="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-f="commercial" aria-pressed="false">Commercial</button>
+          <button class="filter" type="button" data-f="hospitality" aria-pressed="false">Hospitality</button>
+          <button class="filter" type="button" data-f="retail" aria-pressed="false">Retail</button>
+          <button class="filter" type="button" data-f="residential" aria-pressed="false">Residential</button>
+          <button class="filter" type="button" data-f="healthcare" aria-pressed="false">Healthcare</button>
+          <button class="filter" type="button" data-f="institutional" aria-pressed="false">Institutional</button>
+          <button class="filter" type="button" data-f="spiritual" aria-pressed="false">Spiritual</button>
+          <button class="filter" type="button" data-f="facade" aria-pressed="false">Facade</button>
+        </div>
+
+        <!-- Tiles rendered by js/main.js from LC_PROJECTS -->
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 · FEATURED PROJECTS ===================== -->
+    <section class="section-pad" id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-h">Projects in <em>focus</em>.</h2>
+          <p>A closer look at a few representative projects across sectors. Imagery is indicative and will be updated with final project photography.</p>
+        </div>
+        <!-- Rendered by js/main.js from LC_PROJECTS (featured: true) -->
+        <div id="featured"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 · PROCESS ===================== -->
+    <section class="process-wrap section-pad" id="process" aria-labelledby="process-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">How we work</p>
+          <h2 id="process-h">Concept to <em>hand over</em>.</h2>
+          <p>A structured six-stage process that carries every project from first idea to a commissioned, working installation.</p>
+        </div>
+        <div class="process">
+          <article class="step reveal">
+            <div class="step-num">01</div>
+            <h3>Concept Design</h3>
+            <p>Reading the architecture and intent, and shaping the lighting idea — mood, layers and design language for the space.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">02</div>
+            <h3>Schematic Design</h3>
+            <p>Translating the concept into lighting layouts, zones and a preliminary fixture strategy for each area.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">03</div>
+            <h3>Detailed Design</h3>
+            <p>Fixture selection, lux-level calculations, the controls scheme and full technical documentation.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">04</div>
+            <h3>Tendering</h3>
+            <p>Specifications, BOQ and tender support so the project team can procure the right products and vendors.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">05</div>
+            <h3>Site Progress</h3>
+            <p>Coordination, installation support and on-site reviews to ensure the design is realised as intended.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">06</div>
+            <h3>Hand Over</h3>
+            <p>Focusing, scene-setting and controls commissioning — handing over a working, documented installation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 · CREDIBILITY ===================== -->
+    <section class="section-pad" id="credibility" aria-labelledby="cred-h" style="padding-bottom: 0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Track record</p>
+          <h2 id="cred-h">A decade of <em>light</em>.</h2>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><div class="stat-num">10<em>+</em></div><div class="stat-label">Years of practice</div></div>
+          <div class="stat"><div class="stat-num">250<em>+</em></div><div class="stat-label">Projects delivered</div></div>
+          <div class="stat"><div class="stat-num">2</div><div class="stat-label">Studios — Chennai &amp; Bangalore</div></div>
+          <div class="stat"><div class="stat-num">12</div><div class="stat-label">Sectors &amp; genres</div></div>
+        </div>
+        <p class="clients-label">Clients &amp; collaborators</p>
+      </div>
+      <!-- Full-width scrolling client strip, rendered by js/main.js from LC_CLIENTS -->
+      <div class="marquee" id="clients-list"></div>
+    </section>
+
+    <!-- ===================== 08 · TEAM ===================== -->
+    <section class="section-pad" id="team" aria-labelledby="team-h">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">The team</p>
+          <h2 id="team-h">The team <em>works</em>.</h2>
+          <p>A multidisciplinary studio of lighting designers, architects and technologists across our Chennai and Bangalore studios.</p>
+        </div>
+
+        <!-- TEMPORARY B&W stock portraits standing in for the team — NOT the real members.
+             Replace img/team/<slug>.jpg with the actual HD team photos when provided. -->
+        <div class="team-grid">
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/senthil-raj.jpg" alt="Senthil Raj — Founder" loading="lazy" decoding="async"></div>
+            <h3>Senthil Raj</h3>
+            <p>Founder</p>
+            <p class="member-bio">An Electrical Engineer with a Master's in International Business, Senthil began his lighting career in the UAE and brings over 18 years with global architectural and decorative lighting brands. His strength spans technical lighting and controls for hospitality and residential projects.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/kumar-bhatt.jpg" alt="Kumar Bhatt — Studio Head" loading="lazy" decoding="async"></div>
+            <h3>Kumar Bhatt</h3>
+            <p>Studio Head</p>
+            <p class="member-bio">An Electrical Engineer with a post-graduation in Illumination Technology from MIT Manipal, Kumar began at GE Lighting and held key roles at Osram and Lighting Technologies. An IGBC-certified AP, he has delivered street, office and sports lighting across India.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/mani-ram.jpg" alt="Mani Ram — Design Manager" loading="lazy" decoding="async"></div>
+            <h3>Mani Ram</h3>
+            <p>Design Manager</p>
+            <p class="member-bio">An Electrical and Electronics Engineering graduate, Mani Ram moved into lighting after roles in construction and electrical design. He has built strong command of the architectural lighting design process, carrying concepts through to detailed drawings.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/mani-venkat.jpg" alt="Mani Venkat — Senior Associate" loading="lazy" decoding="async"></div>
+            <h3>Mani Venkat</h3>
+            <p>Senior Associate</p>
+            <p class="member-bio">An Electrical and Electronics Engineering graduate from Annamalai University, Mani Venkat has over ten years in the field, beginning in electrical design before moving into lighting. He works across residences, hotels and condominiums, with strength in site execution and lighting management.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/raghu.jpg" alt="Raghu — Senior Lighting Designer" loading="lazy" decoding="async"></div>
+            <h3>Raghu</h3>
+            <p>Senior Lighting Designer</p>
+            <p class="member-bio">A senior member of the design team, Raghu works across the studio's project genres, translating concepts into detailed, buildable lighting schemes. He brings hands-on design experience to residential, commercial and facade projects.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/sudharshan.jpg" alt="Ar. Sudharshan — Lighting Designer" loading="lazy" decoding="async"></div>
+            <h3>Ar. Sudharshan</h3>
+            <p>Lighting Designer</p>
+            <p class="member-bio">An architect by training, Sudharshan moved seamlessly into lighting, the fourth dimension of architecture. He leads concepts, renders and presentations, with strength in detailed designs for residential, facade and hospitality projects.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/akhila.jpg" alt="Ar. Akhila — Lighting Designer" loading="lazy" decoding="async"></div>
+            <h3>Ar. Akhila</h3>
+            <p>Lighting Designer</p>
+            <p class="member-bio">A qualified architect with four years in lighting design, Akhila blends design sensibility with technology to create innovative, sustainable solutions. Her focus is on transforming spaces through light, using the latest tools and best practices.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/swathi.jpg" alt="Ar. Swathi — Lighting Designer" loading="lazy" decoding="async"></div>
+            <h3>Ar. Swathi</h3>
+            <p>Lighting Designer</p>
+            <p class="member-bio">An architect-trained lighting designer, Swathi contributes to concept development and detailing across the studio's residential and commercial work. She brings a strong design sensibility to every project she supports.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/dass-b.jpg" alt="Dass B — Graphic Visualiser" loading="lazy" decoding="async"></div>
+            <h3>Dass B</h3>
+            <p>Graphic Visualiser</p>
+            <p class="member-bio">Dass leads visualisation for the studio, producing the renders and presentation imagery that bring lighting concepts to life. His work helps clients see and feel a scheme before it is built.</p>
+          </article>
+          <article class="member reveal">
+            <div class="member-photo"><img src="img/team/commercial-manager.jpg" alt="Commercial Manager" loading="lazy" decoding="async"></div>
+            <h3>[Name]</h3>
+            <p>Commercial Manager</p>
+            <p class="member-bio">Overseeing the studio's commercial and operational coordination, the role keeps projects moving smoothly across the Chennai and Bangalore studios. It connects design delivery with day-to-day client and vendor management.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 09 · CONTACT ===================== -->
+    <section class="contact-wrap section-pad" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <div class="contact-top">
+          <div class="reveal">
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-h">Let's make<br>something <em>glow</em>.</h2>
+          </div>
+          <div class="contact-direct reveal">
+            <a href="mailto:support@lightcolab.net">support@lightcolab.net</a>
+            <a href="tel:+917305969399">+91 73059 69399</a>
+          </div>
+        </div>
+        <div class="studios">
+          <div class="studio reveal">
+            <span class="eyebrow">Studio One</span>
+            <h3>Chennai</h3>
+            <address>#122/1, 33rd Cross Street,<br>Besant Nagar, Chennai &ndash; 600090</address>
+          </div>
+          <div class="studio reveal">
+            <span class="eyebrow">Studio Two</span>
+            <h3>Bangalore</h3>
+            <address>#5, Sai Krupa, 1 &lsquo;A&rsquo; Cross, 1st Stage,<br>Indira Nagar, Bangalore &ndash; 560038</address>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -127,7 +334,7 @@
     <div class="wrap foot-inner">
       <span class="logo">Light<span>.</span>Colab</span>
       <span>© <span id="yr"></span> Light Colab — Love for Light. All rights reserved.</span>
-      <span>Crafted with care</span>
+      <span>A unit of ControlQ Engineering LLP</span>
     </div>
   </footer>
 

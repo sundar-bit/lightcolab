@@ -10,9 +10,13 @@
    FIELDS
    ------
    name      (required)  Project name.
-   sector    (required)  ONE of: commercial | residential | hospitality |
-                         retail | facade | healthcare | institution
-                         (must match a filter button in index.html)
+   sector    (required)  ONE of the 8 consolidated sectors (must match a
+                         filter button's data-f in index.html):
+                           commercial    | hospitality (incl. convention/banquet)
+                           retail         | residential
+                           healthcare     | institutional (institution + public + community)
+                           spiritual (spiritual + heritage)
+                           facade (facade + sports / stadium / urban)
    location  (required)  City / place shown under the name.
    image     (optional)  Path to the hero image, e.g. "img/oberoi-hero.jpg".
                          Leave as "" to show a labelled placeholder tile.
@@ -27,40 +31,70 @@
 ============================================================================= */
 
 const LC_PROJECTS = [
+  /* --- Featured rows (also appear in the gallery) --- */
   {
-    name: '[Featured Project One]',
-    sector: 'hospitality',
-    location: '[Location]',
-    image: '',
+    name: 'Apollo Proton Cancer Centre',
+    sector: 'healthcare',
+    location: 'Chennai',
+    image: 'img/sectors/healthcare.jpg',
     wide: true,
     featured: true,
-    summary: '[One or two lines on the brief, the lighting intent, and what made the result distinctive. Replace with project copy.]',
-    tags: ['Architectural', 'Scene control', 'Facade'],
+    summary: 'Lighting for one of the region’s leading cancer-care facilities — meeting strict healthcare standards while bringing the feel-good warmth of a well-curated hospitality space, with controls supporting comfort and therapeutic care.',
+    tags: ['Healthcare', 'Lighting controls', 'Therapeutic'],
   },
   {
-    name: '[Featured Project Two]',
+    name: 'JPMC',
     sector: 'commercial',
-    location: '[Location]',
-    image: '',
+    location: 'Bangalore · Gensler',
+    image: 'img/sectors/commercial.jpg',
     featured: true,
-    summary: '[One or two lines on the brief, the lighting intent, and what made the result distinctive. Replace with project copy.]',
+    summary: 'A 10-lakh-sq-ft workplace delivered with Gensler — state-of-the-art lighting and lighting controls designed for employee comfort and productivity across a large, technology-led office floorplate.',
     tags: ['Workplace', 'Daylight integration', 'Energy'],
   },
   {
-    name: '[Featured Project Three]',
-    sector: 'residential',
-    location: '[Location]',
-    image: '',
+    name: 'Swarved Mahamandir Dham',
+    sector: 'spiritual',
+    location: 'Varanasi',
+    image: 'img/sectors/spiritual.jpg',
     featured: true,
-    summary: '[One or two lines on the brief, the lighting intent, and what made the result distinctive. Replace with project copy.]',
-    tags: ['Interior', 'Warm dimming', 'Bespoke'],
+    summary: 'Architectural and decorative lighting for a monumental spiritual centre — carrying warmth and divinity through the space so the light contributes to its positive energy and sense of calm.',
+    tags: ['Spiritual', 'Architectural', 'Decorative'],
   },
 
-  /* --- Gallery-only projects (set featured:true above to promote any of these) --- */
-  { name: '[Project Name]', sector: 'retail',      location: '[Location]', image: '' },
-  { name: '[Project Name]', sector: 'facade',      location: '[Location]', image: '', wide: true },
-  { name: '[Project Name]', sector: 'healthcare',  location: '[Location]', image: '' },
-  { name: '[Project Name]', sector: 'institution', location: '[Location]', image: '' },
-  { name: '[Project Name]', sector: 'commercial',  location: '[Location]', image: '' },
-  { name: '[Project Name]', sector: 'hospitality', location: '[Location]', image: '' },
+  /* --- Gallery projects (one or more per sector) --- */
+  /* commercial */
+  { name: 'Google', sector: 'commercial', location: 'Hyderabad', image: '' },
+  { name: 'Zoho', sector: 'commercial', location: 'Chennai · Pencil & Monk', image: '' },
+  { name: 'Wipro', sector: 'commercial', location: 'Bangalore · Ostraca', image: '' },
+
+  /* hospitality */
+  { name: 'Radisson Blu', sector: 'hospitality', location: 'Chennai Airport', image: 'img/sectors/hospitality.jpg', wide: true },
+  { name: 'Hyatt Centric', sector: 'hospitality', location: 'Dubai', image: '' },
+  { name: 'The Residency Towers', sector: 'hospitality', location: 'Chennai', image: 'img/sectors/convention.jpg' },
+
+  /* retail */
+  { name: 'Tiffara', sector: 'retail', location: 'Chennai', image: 'img/sectors/retail.jpg' },
+  { name: 'Hamleys', sector: 'retail', location: 'Mumbai', image: '' },
+  { name: 'GRT Jewellery', sector: 'retail', location: 'Vishakapatnam', image: '' },
+
+  /* residential */
+  { name: 'Private Residence', sector: 'residential', location: 'Chennai', image: 'img/sectors/residential.jpg' },
+  { name: 'Private Villa', sector: 'residential', location: 'Bangalore', image: '' },
+
+  /* healthcare */
+  { name: 'MGM Health Care', sector: 'healthcare', location: 'Chennai', image: '' },
+
+  /* institutional (institution + public + community) */
+  { name: 'Babaji Vidhyashram', sector: 'institutional', location: 'Chennai', image: 'img/sectors/institution.jpg' },
+  { name: 'International Village School', sector: 'institutional', location: 'Chennai', image: 'img/sectors/community.jpg' },
+  { name: 'Vice Regal Lodge', sector: 'institutional', location: 'Shimla', image: 'img/sectors/public.jpg' },
+
+  /* spiritual */
+  { name: 'Sree Kanakadurga Temple', sector: 'spiritual', location: 'Vijayawada', image: '' },
+  { name: 'St. Joseph Cathedral', sector: 'spiritual', location: 'Chengalpattu', image: '' },
+
+  /* facade (facade + sports / urban) */
+  { name: '57 Poes', sector: 'facade', location: 'Chennai', image: 'img/sectors/facade.jpg', wide: true },
+  { name: 'GKS Helix', sector: 'facade', location: 'Chennai', image: 'img/sectors/sports.jpg' },
+  { name: 'Doha Oasis', sector: 'facade', location: 'Qatar', image: '' },
 ];
