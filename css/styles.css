@@ -604,31 +604,33 @@ button:focus-visible {
 }
 .reveal.in { opacity: 1; transform: none; }
 
-/* 18. PREVIEW BADGE — DELETE THIS BLOCK + its markup in index.html at launch */
-.ph-note {
-  position: fixed;
-  bottom: 18px; right: 18px;
-  z-index: 200;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 12px 38px 12px 16px;
-  font-size: 12px;
-  color: var(--ink-dim);
-  max-width: 260px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+/* 18. LIGHTBOX — click a project photo to view it full-frame */
+.lightbox {
+  position: fixed; inset: 0; z-index: 300;
+  display: none; align-items: center; justify-content: center;
+  padding: 24px;
+  background: rgba(6, 8, 12, 0.93);
+  opacity: 0; transition: opacity .22s ease;
 }
-.ph-note b { color: var(--gold); font-weight: 500; }
-.ph-note button {
-  background: none;
-  border: none;
-  color: var(--ink-faint);
-  cursor: pointer;
-  font-size: 16px;
-  position: absolute;
-  top: 6px; right: 10px;
-  line-height: 1;
+.lightbox.open { display: flex; opacity: 1; }
+.lb-figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.lb-img {
+  max-width: 94vw; max-height: 84vh; width: auto; height: auto;
+  object-fit: contain; border-radius: 6px; background: #111;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .6);
 }
+.lb-cap { color: var(--ink-dim); font-size: 13px; letter-spacing: .04em; text-align: center; }
+.lb-cap b { color: var(--gold); font-weight: 600; }
+.lb-close {
+  position: fixed; top: 16px; right: 20px; z-index: 310;
+  width: 42px; height: 42px; border-radius: 999px;
+  background: rgba(255, 255, 255, .08); border: 1px solid var(--line);
+  color: #fff; font-size: 24px; line-height: 1; cursor: pointer;
+  transition: background .15s ease;
+}
+.lb-close:hover { background: rgba(255, 255, 255, .2); }
+/* photos read as clickable */
+.tile img, .tile-info, .feat-img img { cursor: zoom-in; }
 
 /* 19. RESPONSIVE ----------------------------------------------------------- */
 @media (max-width: 980px) {

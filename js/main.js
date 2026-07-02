@@ -146,6 +146,73 @@
     clientsList.innerHTML = '<div class="marquee-track">' + clientItems + clientItems + '</div>';
   }
 
+  /* Lightbox — click any project photo to view it full-frame -------------- */
+  (function initLightbox() {
+    var lb = $('#lightbox');
+    if (!lb) { return; }
+    var lbImg = $('#lbImg', lb);
+    var lbCap = $('#lbCap', lb);
+    var closeBtn = $('.lb-close', lb);
+    var lastFocus = null;
+
+    function caption(img) {
+      var host = img.closest('.tile, .feat-row');
+      if (!host) { return esc(img.alt || ''); }
+      var nameEl = host.querySelector('.tile-name, .feat-txt h3');
+      var locEl  = host.querySelector('.tile-loc, .feat-txt .eyebrow');
+      var n = nameEl ? nameEl.textContent.trim() : (img.alt || '');
+      var l = locEl ? locEl.textContent.trim() : '';
+      return '<b>' + esc(n) + '</b>' + (l ? ' &middot; ' + esc(l) : '');
+    }
+
+    function open(img) {
+      lastFocus = document.activeElement;
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || '';
+      lbCap.innerHTML = caption(img);
+      lb.hidden = false;
+      requestAnimationFrame(function () { lb.classList.add('open'); });
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function close() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+      window.setTimeout(function () { lb.hidden = true; lbImg.src = ''; }, 220);
+      if (lastFocus && lastFocus.focus) { lastFocus.focus(); }
+    }
+
+    // Open — delegated, because gallery tiles are re-rendered on filter change.
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest) { return; }
+      var tile = e.target.closest('.tile');
+      var host = tile || e.target.closest('.feat-img');
+      if (!host) { return; }
+      var img = host.querySelector('img');   // null for placeholder tiles
+      if (img) { e.preventDefault(); open(img); }
+    });
+
+    // Keyboard: Enter/Space on a focused photo tile.
+    document.addEventListener('keydown', function (e) {
+      var el = document.activeElement;
+      if ((e.key === 'Enter' || e.key === ' ') && el && el.classList &&
+          el.classList.contains('tile')) {
+        var img = el.querySelector('img');
+        if (img) { e.preventDefault(); open(img); }
+      }
+    });
+
+    // Close — button, backdrop click, or Esc.
+    closeBtn.addEventListener('click', close);
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lb-figure')) { close(); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !lb.hidden) { close(); }
+    });
+  })();
+
   /* Scroll reveals --------------------------------------------------------- */
   var reduceMotion = window.matchMedia &&
                      window.matchMedia('(prefers-reduced-motion: reduce)').matches;

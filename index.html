@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 <body>
 
@@ -133,10 +133,10 @@
         <!-- Sector filter — data-f must match the `sector` field in data/projects.js -->
         <div class="filters reveal" role="group" aria-label="Filter projects by sector">
           <button class="filter active" type="button" data-f="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-f="residential" aria-pressed="false">Residential</button>
           <button class="filter" type="button" data-f="commercial" aria-pressed="false">Commercial</button>
           <button class="filter" type="button" data-f="hospitality" aria-pressed="false">Hospitality</button>
           <button class="filter" type="button" data-f="retail" aria-pressed="false">Retail</button>
-          <button class="filter" type="button" data-f="residential" aria-pressed="false">Residential</button>
           <button class="filter" type="button" data-f="healthcare" aria-pressed="false">Healthcare</button>
           <button class="filter" type="button" data-f="institutional" aria-pressed="false">Institutional</button>
           <button class="filter" type="button" data-f="spiritual" aria-pressed="false">Spiritual</button>
@@ -154,7 +154,7 @@
         <div class="sec-head reveal">
           <p class="eyebrow">Selected work</p>
           <h2 id="work-h">Projects in <em>focus</em>.</h2>
-          <p>A closer look at a few representative projects across sectors. Imagery is indicative and will be updated with final project photography.</p>
+          <p>A closer look at a few representative projects across sectors.</p>
         </div>
         <!-- Rendered by js/main.js from LC_PROJECTS (featured: true) -->
         <div id="featured"></div>
@@ -338,16 +338,18 @@
     </div>
   </footer>
 
-  <!-- PREVIEW BADGE — delete this block (and the .ph-note CSS) before launch -->
-  <aside class="ph-note" id="phnote" aria-label="Preview notice">
-    <button type="button" aria-label="Dismiss notice"
-            onclick="document.getElementById('phnote').remove()">×</button>
-    <b>Preview build.</b> All [bracketed] text &amp; tiles are placeholders, ready to swap for real content &amp; Drive images.
-  </aside>
+  <!-- Lightbox (click a project photo to view it full-frame) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project image" hidden>
+    <button class="lb-close" type="button" aria-label="Close">&times;</button>
+    <figure class="lb-figure">
+      <img class="lb-img" id="lbImg" src="" alt="">
+      <figcaption class="lb-cap" id="lbCap"></figcaption>
+    </figure>
+  </div>
 
   <!-- Data (load before main.js) -->
-  <script src="data/projects.js"></script>
-  <script src="data/clients.js"></script>
-  <script src="js/main.js"></script>
+  <script src="data/projects.js?v=2"></script>
+  <script src="data/clients.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
