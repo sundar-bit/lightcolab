@@ -1,0 +1,128 @@
+[
+  {
+    "name": "SENTHILRAJ",
+    "role": "DESIGN LEAD",
+    "qualification": "",
+    "file": "img/team/senthilraj.png",
+    "w": 1254,
+    "h": 1254,
+    "mb": 2.24
+  },
+  {
+    "name": "KUMAR BHAT",
+    "role": "STUDIO HEAD",
+    "qualification": "",
+    "file": "img/team/kumar-bhat.png",
+    "w": 1254,
+    "h": 1254,
+    "mb": 2.18
+  },
+  {
+    "name": "RAGHUNANDAN",
+    "role": "DESIGN ASSOCIATE",
+    "qualification": "INTERIOR DESIGNER",
+    "file": "img/team/raghunandan.png",
+    "w": 1254,
+    "h": 1254,
+    "mb": 2.92
+  },
+  {
+    "name": "AR. SUDHARSHAN",
+    "role": "DESIGN ASSOCIATE",
+    "qualification": "ARCHITECT",
+    "file": "img/team/sudharshan.png",
+    "w": 1254,
+    "h": 1254,
+    "mb": 2.21
+  },
+  {
+    "name": "MANIKANDAN R",
+    "role": "DESIGN MANAGER",
+    "qualification": "ELECTRICAL & ELECTRONICS ENGINEER",
+    "file": "img/team/manikandan-r.png",
+    "w": 1122,
+    "h": 1402,
+    "mb": 2.49
+  },
+  {
+    "name": "MAHENDRA KUMAR",
+    "role": "DESIGN MANAGER",
+    "qualification": "MECHANICAL ENGINEER",
+    "file": "img/team/mahendra-kumar.png",
+    "w": 1254,
+    "h": 1254,
+    "mb": 2.44
+  },
+  {
+    "name": "DINESH KUMAR",
+    "role": "LIGHTING DESIGNER",
+    "qualification": "ELECTRONICS & COMMUNICATION ENGINEER",
+    "file": "img/team/dinesh-kumar.png",
+    "w": 1122,
+    "h": 1402,
+    "mb": 2.48
+  },
+  {
+    "name": "KISHORE KUMAR",
+    "role": "LIGHTING DESIGNER",
+    "qualification": "MECHANICAL ENGINEER",
+    "file": "img/team/kishore-kumar.png",
+    "w": 1145,
+    "h": 1373,
+    "mb": 2.23
+  },
+  {
+    "name": "MOHAN T",
+    "role": "LIGHTING DESIGNER",
+    "qualification": "ELECTRICAL & ELECTRONICS ENGINEER",
+    "file": "img/team/mohan-t.png",
+    "w": 1085,
+    "h": 1450,
+    "mb": 2.41
+  },
+  {
+    "name": "SHYAM SUNDER",
+    "role": "LIGHTING DESIGNER",
+    "qualification": "PHYSICS GRADUATE",
+    "file": "img/team/shyam-sunder.png",
+    "w": 1122,
+    "h": 1402,
+    "mb": 2.51
+  },
+  {
+    "name": "AR. SWATHI",
+    "role": "LIGHTING DESIGNER",
+    "qualification": "ARCHITECT",
+    "file": "img/team/swathi.png",
+    "w": 1240,
+    "h": 1269,
+    "mb": 2.14
+  },
+  {
+    "name": "VETRI SELVAN",
+    "role": "LIGHTING DESIGNER",
+    "qualification": "MECHANICAL ENGINEER",
+    "file": "img/team/vetri-selvan.png",
+    "w": 1024,
+    "h": 1536,
+    "mb": 2.47
+  },
+  {
+    "name": "AR. SHINE DHAS",
+    "role": "GRAPHIC VISUALISER",
+    "qualification": "ARCHITECT",
+    "file": "img/team/shine-dhas.png",
+    "w": 1165,
+    "h": 1350,
+    "mb": 2.06
+  },
+  {
+    "name": "NARESH B",
+    "role": "COMMERCIAL MANAGER",
+    "qualification": "COMMERCE GRADUATE",
+    "file": "img/team/naresh-b.png",
+    "w": 1086,
+    "h": 1448,
+    "mb": 2.45
+  }
+]
