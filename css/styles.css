@@ -350,7 +350,10 @@ button:focus-visible {
 .filter:hover { color: var(--ink); border-color: var(--ink-faint); }
 .filter.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+/* `dense` backfills the hole a `wide` tile can leave, so the grid stays
+   flush even if the project order changes. */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+           grid-auto-flow: row dense; }
 .tile {
   position: relative;
   border-radius: 12px;
@@ -395,6 +398,11 @@ button:focus-visible {
 .tile-sector { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .tile-name { font-family: var(--display); font-size: 20px; margin-top: 6px; font-weight: 400; }
 .tile-loc { font-size: 13px; color: var(--ink-dim); margin-top: 2px; }
+/* Built-up area / "Ongoing" status, per the client's project list. */
+.tile-meta {
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold-soft); margin-top: 8px;
+}
 .gallery-empty { color: var(--ink-faint); font-size: 15px; padding: 30px 0; }
 
 /* 11. FEATURED PROJECTS (section 5) ---------------------------------------- */
@@ -545,7 +553,12 @@ button:focus-visible {
   border: 1px solid var(--line-soft);
   position: relative;
 }
-.member-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* Client brief: team portraits run desaturated / black & white, as they did
+   in the earlier build — the photos themselves are left untouched. */
+.member-photo img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(1) contrast(1.04) brightness(.98);
+}
 .member-photo .tile-ph { font-size: 11px; }
 .member h3 { font-size: 18px; font-weight: 500; letter-spacing: -0.01em; }
 .member p { font-size: 14px; color: var(--gold-soft); margin-top: 4px; }

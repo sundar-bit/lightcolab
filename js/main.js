@@ -77,19 +77,36 @@
       ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + ' — ' + esc(p.sector) +
         ' lighting project in ' + esc(p.location) + '" loading="lazy" decoding="async">'
       : '<div class="tile-ph" aria-hidden="true">' + esc(p.sector) + '</div>';
+    // Built-up area and "Ongoing" status, as supplied by the client.
+    var meta = [p.area, p.status].filter(Boolean).join(' · ');
     return '<article class="tile' + (p.wide && allowWide ? ' wide' : '') + '" tabindex="0">' +
              media +
              '<div class="tile-info">' +
                '<div class="tile-sector">' + esc(p.sector) + '</div>' +
                '<h3 class="tile-name">' + esc(p.name) + '</h3>' +
                '<div class="tile-loc">' + esc(p.location) + '</div>' +
+               (meta ? '<div class="tile-meta">' + esc(meta) + '</div>' : '') +
              '</div>' +
            '</article>';
   }
 
+  // "All" is a curated overview, not a dump: one representative project per
+  // sector — the first entry of each sector in data/projects.js. This keeps the
+  // individual sector buttons meaningful (client feedback, 18 Aug 2026).
+  function representatives() {
+    var seen = {};
+    return projects.filter(function (p) {
+      if (seen[p.sector]) { return false; }
+      seen[p.sector] = true;
+      return true;
+    });
+  }
+
   function renderTiles(filter) {
     if (!gallery) { return; }
-    var list = projects.filter(function (p) { return filter === 'all' || p.sector === filter; });
+    var list = filter === 'all'
+      ? representatives()
+      : projects.filter(function (p) { return p.sector === filter; });
     if (!list.length) {
       gallery.innerHTML = '<p class="gallery-empty">No projects in this sector yet.</p>';
       return;
@@ -128,7 +145,7 @@
                '<div class="feat-img">' + media + '</div>' +
                '<div class="feat-txt">' +
                  '<span class="eyebrow">' + esc(p.sector) + ' · ' + esc(p.location) + '</span>' +
-                 '<h3>' + esc(p.name) + '</h3>' +
+                 '<h3>' + esc(p.feature_name || p.name) + '</h3>' +
                  '<p>' + esc(p.summary || '') + '</p>' +
                  (tags ? '<div class="feat-tags">' + tags + '</div>' : '') +
                '</div>' +
