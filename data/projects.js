@@ -52,6 +52,10 @@
 
 const LC_PROJECTS = [
   /* ----------------------------------------------------------------- COMMERCIAL */
+  { name: 'JPMC',              sector: 'commercial', location: 'Bangalore · Gensler',     image: 'img/commercial/jpmc.jpg',          area: '10L sft' },
+  { name: 'JPMC',              sector: 'commercial', location: 'Mumbai · M Moser',        image: 'img/commercial/jpmc-mumbai.jpg',   area: '10L sft' },
+  { name: 'Uber',              sector: 'commercial', location: 'Bangalore · Adrianse',    image: 'img/commercial/uber.jpg',          area: '10L sft', status: 'Ongoing' },
+  { name: 'British Petroleum', sector: 'commercial', location: 'Pune · Adrianse',         image: 'img/commercial/bp.jpg',            area: '10L sft', status: 'Ongoing' },
   {
     name: 'Wipro Lab45',
     sector: 'commercial',
@@ -63,10 +67,6 @@ const LC_PROJECTS = [
     summary: 'WIPRO Lab45 is a dedicated innovation hub and research-and-development arm focused on conceptualizing, incubating, and building cutting-edge digital products, platforms, and automation solutions.',
     tags: ['Workplace', 'Innovation hub', 'R&D'],
   },
-  { name: 'JPMC',              sector: 'commercial', location: 'Bangalore · Gensler',     image: 'img/commercial/jpmc.jpg',          area: '10L sft' },
-  { name: 'JPMC',              sector: 'commercial', location: 'Mumbai · M Moser',        image: 'img/commercial/jpmc-mumbai.jpg',   area: '10L sft' },
-  { name: 'Uber',              sector: 'commercial', location: 'Bangalore · Adrianse',    image: 'img/commercial/uber.jpg',          area: '10L sft', status: 'Ongoing' },
-  { name: 'British Petroleum', sector: 'commercial', location: 'Pune · Adrianse',         image: 'img/commercial/bp.jpg',            area: '10L sft', status: 'Ongoing' },
   { name: 'Suntec',            sector: 'commercial', location: 'Trivandrum · DWP Interics', image: 'img/commercial/suntec.jpg',      area: '5L sft' },
   { name: 'Wipro',             sector: 'commercial', location: 'Kochi · Ostraca',         image: 'img/commercial/wipro-kochi.jpg',   area: '4L sft', status: 'Ongoing' },
   { name: 'MSD',               sector: 'commercial', location: 'Hyderabad · Adrianse',    image: 'img/commercial/msd.jpg',           area: '1.5L sft' },
@@ -92,7 +92,6 @@ const LC_PROJECTS = [
   { name: 'Sidharth Residence',       sector: 'residential', location: 'Chennai',    image: 'img/residential/sidharth.jpg' },
   { name: 'JK Residence',             sector: 'residential', location: 'Coimbatore', image: 'img/residential/jk.jpg' },
   { name: 'Kerala Residence',         sector: 'residential', location: 'Kerala',     image: 'img/residential/kerala.jpg' },
-  { name: 'Aikaa Villas',             sector: 'residential', location: 'Hyderabad',  image: 'img/residential/aikaa-villas.jpg' },
 
   /* ---------------------------------------------------------------- HOSPITALITY */
   {
@@ -117,12 +116,6 @@ const LC_PROJECTS = [
   { name: 'Holiday Inn Express',   sector: 'hospitality', location: 'Bangalore',       image: 'img/hospitality/holiday-inn-express.jpg' },
   { name: 'Hotel @ Vandalur',      sector: 'hospitality', location: 'Chennai',         image: 'img/hospitality/vandalur.jpg' },
   { name: 'Nature Knots',          sector: 'hospitality', location: 'Bangalore',       image: 'img/hospitality/nature-knots.jpg' },
-  { name: 'Radisson Blu Resort',   sector: 'hospitality', location: 'Pondicherry',     image: 'img/hospitality/radisson-blu-resort.jpg' },
-  { name: 'Lemon Tree',            sector: 'hospitality', location: 'Vijayawada',      image: 'img/hospitality/lemon-tree.jpg' },
-  { name: 'Radisson Blu',          sector: 'hospitality', location: 'Chennai Airport', image: 'img/hospitality/radisson-blu.jpg' },
-  { name: 'The Residency Towers',  sector: 'hospitality', location: 'Pondicherry',     image: 'img/hospitality/residency-towers.jpg' },
-  { name: 'Hyatt Place',           sector: 'hospitality', location: 'Kathmandu',       image: 'img/hospitality/hyatt-place.jpg' },
-  { name: 'Hotel Residency',       sector: 'hospitality', location: 'Coimbatore',      image: 'img/hospitality/hotel-residency.jpg' },
 
   /* --------------------------------------------------------------------- RETAIL */
   {
@@ -139,6 +132,43 @@ const LC_PROJECTS = [
   { name: 'Gajraj Jewellers', sector: 'retail', location: 'Bangalore', image: 'img/retail/gajraj-jewellers.jpg' },
   { name: 'Trove Tiles',      sector: 'retail', location: 'Bangalore', image: 'img/retail/trove-tiles.jpg' },
 
+  /* --------------------------------------------------------- FACADE & LANDSCAPE */
+  { name: 'Baashyaam Damera Gardens', sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-damera-gardens.jpg' },
+  { name: 'Baashyaam Crown',          sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-crown.jpg' },
+  { name: 'Baashyaam — The Peak',     sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-the-peak.jpg' },
+  { name: 'Baashyaam — Plutus',       sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-plutus.jpg' },
+  { name: 'Arihant Vipassana',        sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-vipassana.jpg' },
+  { name: 'Arihant Saraswati',        sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-saraswati.jpg' },
+  { name: 'Arihant Aurelia',          sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-aurelia.jpg' },
+  { name: 'Arihant Sri Nivas',        sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-sri-nivas.jpg' },
+  { name: 'Arihant Chirla',           sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-chirla.jpg' },
+  { name: 'Urbanrise Springtide',     sector: 'facade', location: 'Chennai', image: 'img/facade/urbanrise-springtide.jpg' },
+  /* --------------------------------------------------------------------- OTHERS */
+  /* New sector, client instruction 22 Aug 2026. Three projects that did not sit
+     comfortably in their previous sectors were moved here. */
+  { name: 'Aikaa Villas',             sector: 'others',      location: 'Hyderabad',  image: 'img/residential/aikaa-villas.jpg' },
+  {
+    name: 'Param History, Science, Innovation and Cultural Centre',
+    sector: 'others',
+    location: 'Bangalore',
+    image: 'img/institutional/param.jpg',
+    featured: true,
+    summary: 'The Param International Experience Centre spans 15 acres and 1.2 million sq. ft., poised to be India’s largest multi-experience hub. A people-powered, public-funded landmark — a platform for Science, Innovation, History, Culture, and Arts under one roof. A visionary space where learning, innovation, and discovery converge to build the India of tomorrow.',
+    tags: ['Culture', 'Science & innovation', 'Experience centre'],
+  },
+  { name: 'Formula 4 Racing',         sector: 'others', location: 'Chennai', image: 'img/facade/formula-4-racing.jpg' },
+];
+
+/* =============================================================================
+   ARCHIVED — nothing renders this array.
+
+   The client removed the Healthcare, Institutional and Spiritual sectors on
+   22 Aug 2026. Param was explicitly rescued into Others; these eight had no
+   home left. They are kept here rather than deleted, so restoring any of them
+   means moving the entry back into LC_PROJECTS with a live sector. Two carry
+   featured copy that would otherwise be lost — Apollo Proton and Swarved.
+   ========================================================================== */
+const LC_ARCHIVED = [
   /* ----------------------------------------------------------------- HEALTHCARE */
   {
     name: 'Apollo Proton Cancer Centre',
@@ -153,15 +183,6 @@ const LC_PROJECTS = [
   { name: 'MGM Health Care', sector: 'healthcare', location: 'Chennai', image: '' },
 
   /* -------------------------------------------------------------- INSTITUTIONAL */
-  {
-    name: 'Param History, Science, Innovation and Cultural Centre',
-    sector: 'institutional',
-    location: 'Bangalore',
-    image: 'img/institutional/param.jpg',
-    featured: true,
-    summary: 'The Param International Experience Centre spans 15 acres and 1.2 million sq. ft., poised to be India’s largest multi-experience hub. A people-powered, public-funded landmark — a platform for Science, Innovation, History, Culture, and Arts under one roof. A visionary space where learning, innovation, and discovery converge to build the India of tomorrow.',
-    tags: ['Culture', 'Science & innovation', 'Experience centre'],
-  },
   { name: 'Babaji Vidhyashram',           sector: 'institutional', location: 'Chennai', image: 'img/institutional/babaji.jpg' },
   { name: 'International Village School', sector: 'institutional', location: 'Chennai', image: '' },
   { name: 'Vice Regal Lodge',             sector: 'institutional', location: 'Shimla',  image: '' },
@@ -178,17 +199,4 @@ const LC_PROJECTS = [
   },
   { name: 'Sree Kanakadurga Temple', sector: 'spiritual', location: 'Vijayawada',   image: '' },
   { name: 'St. Joseph Cathedral',    sector: 'spiritual', location: 'Chengalpattu', image: '' },
-
-  /* --------------------------------------------------------- FACADE & LANDSCAPE */
-  { name: 'Baashyaam Damera Gardens', sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-damera-gardens.jpg' },
-  { name: 'Baashyaam Crown',          sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-crown.jpg' },
-  { name: 'Baashyaam — The Peak',     sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-the-peak.jpg' },
-  { name: 'Baashyaam — Plutus',       sector: 'facade', location: 'Chennai', image: 'img/facade/baashyaam-plutus.jpg' },
-  { name: 'Arihant Vipassana',        sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-vipassana.jpg' },
-  { name: 'Arihant Saraswati',        sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-saraswati.jpg' },
-  { name: 'Arihant Aurelia',          sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-aurelia.jpg' },
-  { name: 'Arihant Sri Nivas',        sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-sri-nivas.jpg' },
-  { name: 'Arihant Chirla',           sector: 'facade', location: 'Chennai', image: 'img/facade/arihant-chirla.jpg' },
-  { name: 'Urbanrise Springtide',     sector: 'facade', location: 'Chennai', image: 'img/facade/urbanrise-springtide.jpg' },
-  { name: 'Formula 4 Racing',         sector: 'facade', location: 'Chennai', image: 'img/facade/formula-4-racing.jpg' },
 ];

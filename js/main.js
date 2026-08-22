@@ -90,33 +90,23 @@
            '</article>';
   }
 
-  // "All" is a curated overview, not a dump: one representative project per
-  // sector — the first entry of each sector in data/projects.js. This keeps the
-  // individual sector buttons meaningful (client feedback, 18 Aug 2026).
-  function representatives() {
-    var seen = {};
-    return projects.filter(function (p) {
-      if (seen[p.sector]) { return false; }
-      seen[p.sector] = true;
-      return true;
-    });
-  }
-
+  // The "All" tab was removed on 22 Aug 2026 at the client's request, so there
+  // is no longer an unfiltered overview and no representative-per-sector view.
+  // Every button now shows one whole sector. The `wide` flag in projects.js
+  // only ever spanned columns in the All grid, so it is now inert — harmless,
+  // and left in the data in case an overview tab ever comes back.
   function renderTiles(filter) {
     if (!gallery) { return; }
-    var list = filter === 'all'
-      ? representatives()
-      : projects.filter(function (p) { return p.sector === filter; });
+    var list = projects.filter(function (p) { return p.sector === filter; });
     if (!list.length) {
       gallery.innerHTML = '<p class="gallery-empty">No projects in this sector yet.</p>';
       return;
     }
-    // 'wide' tiles only span columns in the unfiltered "All" view.
-    gallery.innerHTML = list.map(function (p) { return tileMarkup(p, filter === 'all'); }).join('');
+    gallery.innerHTML = list.map(function (p) { return tileMarkup(p, false); }).join('');
   }
 
   if (gallery) {
-    renderTiles('all');
+    renderTiles('commercial');
     $$('.filter').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var active = $('.filter.active');

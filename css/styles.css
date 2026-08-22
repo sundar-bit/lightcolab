@@ -545,7 +545,10 @@ button:focus-visible {
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 60px; }
 .member { text-align: left; }
 .member-photo {
-  aspect-ratio: 3 / 4;
+  /* 4:5 — the ratio the client cropped the team portraits to in the 2026+ deck
+     (client instruction, 22 Aug 2026). Was 3:4. The photos are object-fit:cover
+     below, so the frame change alone re-crops them consistently. */
+  aspect-ratio: 4 / 5;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 18px;
@@ -627,10 +630,18 @@ button:focus-visible {
 }
 .lightbox.open { display: flex; opacity: 1; }
 .lb-figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+/* Client, 22 Aug 2026: enlarged photos should fill the space whatever their
+   aspect ratio. Previously the img sized to its own intrinsic dimensions under
+   a max-width/max-height cap, so anything smaller than the cap — and several
+   photos came out of the deck small — opened as a little picture floating in a
+   large dark overlay. Giving the box a fixed size and using object-fit:contain
+   scales every image UP to fill that frame while keeping its proportions.
+   The #111 backing is gone so a portrait image has no visible letterbox: the
+   unused area is simply the overlay behind it. */
 .lb-img {
-  max-width: 94vw; max-height: 84vh; width: auto; height: auto;
-  object-fit: contain; border-radius: 6px; background: #111;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, .6);
+  width: 94vw; height: 82vh;
+  object-fit: contain; border-radius: 6px; background: transparent;
+  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, .6));
 }
 .lb-cap { color: var(--ink-dim); font-size: 13px; letter-spacing: .04em; text-align: center; }
 .lb-cap b { color: var(--gold); font-weight: 600; }
